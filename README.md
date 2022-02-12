@@ -1,5 +1,6 @@
 # Workshop1
 Java workshop
+
 This is a simple task management Java console program.
 
 This program allows you to:
@@ -9,4 +10,4 @@ This program allows you to:
 4. Remove tasks.
 5. Read and load data from the file on start.
 6. Write data to file.
-7. check upon removal if number value is correct. 
+7. Check upon removal if number value is correct. 
