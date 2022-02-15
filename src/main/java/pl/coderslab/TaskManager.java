@@ -8,7 +8,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
-public class Main {
+public class TaskManager {
 
     public static void main(String[] args) {
 
@@ -122,7 +122,14 @@ public class Main {
     private static String[][] removeItem(String[][] loadedTasks) throws IndexOutOfBoundsException {
         Scanner s = new Scanner(System.in);
         System.out.println("Please provide number of the item to be removed.");
-        int input = Integer.parseInt(s.nextLine());
+        int input = -1;
+        try {
+            input = Integer.parseInt(s.nextLine());
+        } catch (NumberFormatException en) {
+            System.out.println("Your option must be a number;");
+            return loadedTasks;
+        }
+
         try {
             loadedTasks = ArrayUtils.remove(loadedTasks, (input - 1));
             System.out.println(ConsoleColors.RED_BOLD + "Item " + (input) +
